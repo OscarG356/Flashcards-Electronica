@@ -1,49 +1,154 @@
-# Getting Started with Create React App
+# ⚡ Flashcards Electrónica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web interactiva para estudiar conceptos fundamentales de electrónica mediante tarjetas de estudio (flashcards).
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- **Tarjetas Interactivas**: Haz clic para voltear las tarjetas y ver las respuestas
+- **Filtros por Categoría**: Organiza el estudio por temas específicos
+- **Seguimiento de Progreso**: Marca tarjetas como dominadas y ve tu progreso
+- **Modo Oscuro Automático**: Se adapta a las preferencias del sistema
+- **Diseño Responsive**: Funciona perfecto en móviles, tablets y escritorio
+- **Exportación de Progreso**: Descarga tu progreso en formato JSON
+- **Persistencia Local**: Tu progreso se guarda automáticamente
+- **Animaciones Suaves**: Transiciones fluidas con Framer Motion
 
-### `npm start`
+## 📚 Temas Incluidos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Leyes**: Ley de Ohm y aplicaciones
+- **Circuitos**: Serie, paralelo y análisis básico
+- **Resistencias**: Código de colores y cálculos
+- **Componentes**: Diodos, transistores, capacitores, inductores
+- **Teoremas**: Thevenin y Norton
+- **Potencia**: AC/DC y factor de potencia
+- **AC**: Impedancia y conceptos de corriente alterna
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Instalación y Uso
 
-### `npm test`
+### Prerrequisitos
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Instalación Local
 
-### `npm run build`
+1. **Clona o descarga el proyecto**
+   ```bash
+   git clone https://github.com/tu-usuario/flashcards-electronica.git
+   cd flashcards-electronica
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Instala las dependencias**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Ejecuta en modo desarrollo**
+   ```bash
+   npm start
+   ```
+   La aplicación se abrirá en [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Construir para producción**
+   ```bash
+   npm run build
+   ```
 
-### `npm run eject`
+### 🚀 Deploy en GitHub Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Actualiza el homepage en package.json**
+   ```json
+   "homepage": "https://TU-USUARIO.github.io/flashcards-electronica"
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Haz el deploy**
+   ```bash
+   npm run deploy
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Configura GitHub Pages**
+   - Ve a la configuración de tu repositorio en GitHub
+   - En "Pages", selecciona la rama `gh-pages` como fuente
+   - Tu aplicación estará disponible en la URL configurada
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 Cómo Usar
 
-## Learn More
+1. **Estudiar**: Haz clic en cualquier tarjeta para ver la respuesta
+2. **Filtrar**: Usa los botones de categoría para estudiar temas específicos
+3. **Marcar Progreso**: Haz clic en ☐ para marcar una tarjeta como dominada ✅
+4. **Ver Progreso**: La barra muestra cuántas tarjetas has visto y dominado
+5. **Exportar**: Usa el botón "📤 Exportar progreso" para descargar tu historial
+6. **Resetear**: Si necesitas empezar de nuevo, usa "🔄 Resetear progreso"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Tecnologías Utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React 19**: Framework principal
+- **TailwindCSS**: Estilos y diseño responsive
+- **Framer Motion**: Animaciones fluidas
+- **LocalStorage**: Persistencia de datos
+- **GitHub Pages**: Deploy gratuito
+
+## 📱 Responsive Design
+
+- **Móvil**: 1 columna
+- **Tablet**: 2 columnas  
+- **Escritorio**: 3-4 columnas
+- **Modo Oscuro**: Automático según preferencias del sistema
+
+## 📊 Gestión de Datos
+
+Los datos se almacenan localmente usando `localStorage`:
+- Progreso de tarjetas vistas
+- Tarjetas marcadas como dominadas
+- Persistencia entre sesiones
+
+## 🔧 Personalización
+
+### Agregar Nuevas Tarjetas
+
+Edita `src/data/flashcards.js`:
+
+```javascript
+{
+  id: 25, // ID único
+  pregunta: "Tu pregunta aquí",
+  respuesta: "Tu respuesta aquí", 
+  categoria: "Categoría" // Debe existir en el array categories
+}
+```
+
+### Nuevas Categorías
+
+Agrega la categoría en `src/data/flashcards.js`:
+
+```javascript
+export const categories = [
+  "Todas",
+  "Leyes", 
+  "Circuitos",
+  // ... categorías existentes
+  "Tu Nueva Categoría"
+];
+```
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+
+## ✨ Créditos
+
+Creado con ❤️ para estudiantes de electrónica e ingeniería.
+
+---
+
+**¡Feliz estudio! ⚡📚**
 
 ### Code Splitting
 
