@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Flashcards-Electronica/static/css/main.d1b0ab1b.css",
+    "main.js": "/Flashcards-Electronica/static/js/main.bb88c78a.js",
+    "static/js/453.dcb3c23a.chunk.js": "/Flashcards-Electronica/static/js/453.dcb3c23a.chunk.js",
+    "index.html": "/Flashcards-Electronica/index.html",
+    "main.d1b0ab1b.css.map": "/Flashcards-Electronica/static/css/main.d1b0ab1b.css.map",
+    "main.bb88c78a.js.map": "/Flashcards-Electronica/static/js/main.bb88c78a.js.map",
+    "453.dcb3c23a.chunk.js.map": "/Flashcards-Electronica/static/js/453.dcb3c23a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1b0ab1b.css",
+    "static/js/main.bb88c78a.js"
+  ]
+}
