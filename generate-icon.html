@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="192" height="192" style="border: 1px solid black;"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Fondo azul gradient
+        const gradient = ctx.createLinearGradient(0, 0, 192, 192);
+        gradient.addColorStop(0, '#3b82f6');
+        gradient.addColorStop(1, '#1d4ed8');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 192, 192);
+        
+        // Emoji de rayo
+        ctx.font = '120px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#ffffff';
+        ctx.fillText('⚡', 96, 96);
+        
+        // Convertir a data URL
+        console.log('PNG Data URL:', canvas.toDataURL('image/png'));
+    </script>
+</body>
+</html>
